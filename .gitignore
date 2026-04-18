@@ -1,0 +1,40 @@
+# 这是一份标准的 Unity Git 忽略清单
+
+# 忽略临时文件夹和缓存
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# 忽略内存分析和崩溃报告
+/[Mm]emoryCaptures/
+sysinfo.txt
+crash_info.txt
+
+# 忽略系统自动生成的垃圾文件
+.DS_Store
+Thumbs.db
+*.swp
+
+# 忽略 IDE (如 VS、Rider) 自动生成的配置和缓存
+.vs/
+.idea/
+.gradle/
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
