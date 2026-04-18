@@ -30,12 +30,13 @@ public class BulletLogic : MonoBehaviour
     }
 
     // 预留的碰撞接口：打中敌人后回收自己
-    /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             // 这里以后可以写触发粒子爆炸特效的代码
+            Destroy(other.gameObject);
             BulletPool3D.Instance.ReturnBullet(this.gameObject);
         }
-    }*/
+    }
 }
