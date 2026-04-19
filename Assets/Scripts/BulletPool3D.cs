@@ -8,9 +8,8 @@ public class BulletPool3D : MonoBehaviour
     [Header("池子配置")]
     public GameObject bulletPrefab; 
     public int poolSize = 100;   
-
-    // 核心数据结构：队列（先进先出，最适合做对象池）
-    private Queue<GameObject> pool = new Queue<GameObject>();
+    
+    private Queue<GameObject> pool = new Queue<GameObject>();//先进先出
 
     private void Awake()
     {

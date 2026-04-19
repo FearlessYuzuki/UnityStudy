@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   timerText: {fileID: 1570519215}
-  timeRemaining: 15
+  timeRemaining: 60
 --- !u!4 &1165485304
 Transform:
   m_ObjectHideFlags: 0

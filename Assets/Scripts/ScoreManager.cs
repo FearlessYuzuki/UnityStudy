@@ -6,7 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
-    public TextMeshProUGUI scoreText; // 拖入你刚才创建的 Text
+    public TextMeshProUGUI scoreText;
     private int currentScore = 0;
 
     private void Awake()

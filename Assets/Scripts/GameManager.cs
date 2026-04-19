@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; // 控制 TextMeshPro 必须用到
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateTimerUI()
     {
-        // 使用 Mathf.CeilToInt 向上取整，这样即使是 0.1 秒也会显示 1，直到真正变为 0
+       
         int seconds = Mathf.CeilToInt(timeRemaining);
         timerText.text = "TIME: " + seconds.ToString();
     }
@@ -42,10 +42,7 @@ public class GameManager : MonoBehaviour
         gameEnded = true;
         Debug.Log("倒计时结束！");
         
-        // 【核心魔法】将游戏时间流逝速度设为 0
         Time.timeScale = 0f; 
         
-        // 建议：如果你做了一个包含“重新开始”按钮的 UI 面板，可以在这里把它激活
-        // gameOverPanel.SetActive(true); 
     }
 }
