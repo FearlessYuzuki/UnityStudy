@@ -21,7 +21,7 @@ public class PlayerController3D : MonoBehaviour
 
     private void CalculateBoundaries()
     {
-        //计算高度(calculate hight to players
+        //计算高度(calculate height to players
         float camdistanceToPlayer = mainCam.transform.position.y - transform.position.y;
         
         //坐标转换(Location transition)
@@ -39,6 +39,14 @@ public class PlayerController3D : MonoBehaviour
         //CalculateBoundaries();//持续计算 之前切分辨率会卡出去 为了自己调试方便
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveZ = Input.GetAxisRaw("Vertical");
+        if (Input.GetKey(KeyCode.LeftShift))//加速 减速
+        {
+            moveSpeed = 20f;
+        }
+        else
+        {
+            moveSpeed = 10f;
+        }
 
         Vector3 movement = new Vector3(moveX, 0, moveZ).normalized;
         transform.Translate(movement * moveSpeed * Time.deltaTime, Space.Self);
@@ -49,8 +57,7 @@ public class PlayerController3D : MonoBehaviour
         
         transform.position = new Vector3(clampedX, transform.position.y, clampedZ);
         
-        // --- 射击逻辑 ---
-        // GetKey 表示按住不放就能一直连发
+        //射击逻辑
         if (Input.GetKey(KeyCode.Space) && Time.time >= nextFireTime)
         {
             Shoot();
@@ -59,10 +66,8 @@ public class PlayerController3D : MonoBehaviour
     }
     private void Shoot()
     {
-        // 核心亮点：不 Instantiate，而是向池子申请子弹
         GameObject bullet = BulletPool3D.Instance.GetBullet();
         
-        // 如果你设置了具体的枪口位置，就用枪口位置；如果没有，就从玩家中心发射
         Vector3 spawnPos = firePoint != null ? firePoint.position : transform.position;
         
         bullet.transform.position = spawnPos;
