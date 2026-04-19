@@ -24,7 +24,7 @@ public class Enemy3D : MonoBehaviour
         }
     }
 
-    void Randomize()
+    void Randomize() //速度随机
     {
         speed = Random.Range(5f, 10f);
     }
