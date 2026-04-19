@@ -17,9 +17,10 @@ public class Enemy3D : MonoBehaviour
     {
         transform.Translate(Vector3.back * speed * Time.deltaTime);
 
-        // 如果飞出屏幕底端，自动销毁，防止内存泄漏
+        // 如果飞出屏幕底端，自动销毁，防止内存泄漏////血量计算...
         if (transform.position.z < -15f)
         {
+            // 销毁或回收敌人
             Destroy(gameObject);
         }
     }

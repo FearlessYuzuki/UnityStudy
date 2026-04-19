@@ -21,7 +21,7 @@ public class BulletPool3D : MonoBehaviour
         {
             GameObject obj = Instantiate(bulletPrefab);
             obj.SetActive(false); // 隐藏待命
-            // 为了保持 Hierarchy 面板干净，让子弹全做 GameManager 的子物体
+            // 为了保持面板干净
             obj.transform.SetParent(this.transform); 
             pool.Enqueue(obj);
         }
