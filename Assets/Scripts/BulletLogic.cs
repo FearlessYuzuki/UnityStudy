@@ -5,6 +5,9 @@ public class BulletLogic : MonoBehaviour
     [Header("子弹属性")]
     public float speed = 25f;
     public float lifeTime = 2f; // 如果子弹一直没打中，2秒后自动回收，防止内存泄漏
+    
+    public GameObject explosionPrefab; 
+    public float effectDuration = 1.0f; // 特效物体存在的最长时间
 
     private float timer;
     
@@ -29,6 +32,9 @@ public class BulletLogic : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            GameObject fx = Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+            Destroy(fx, effectDuration);
+            
             if (ScoreManager.Instance != null)
             {
                 ScoreManager.Instance.AddScore(100);

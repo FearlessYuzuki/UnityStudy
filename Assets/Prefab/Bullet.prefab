@@ -157,3 +157,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletLogic
   speed: 25
   lifeTime: 2
+  explosionPrefab: {fileID: 4966139450869258373, guid: 4ead1bc25f7156144bde100070f63f61, type: 3}
+  effectDuration: 1
