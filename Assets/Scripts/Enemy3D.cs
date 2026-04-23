@@ -7,7 +7,7 @@ public class Enemy3D : MonoBehaviour
 {
     [Header("敌人属性")]
     public float speed = 5f;
-
+    
     private void Start()
     {
         InvokeRepeating("Randomize", 2f, 3f);
@@ -22,6 +22,10 @@ public class Enemy3D : MonoBehaviour
         {
             // 销毁或回收敌人
             Destroy(gameObject);
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.ReduceHealth(10f);
+            }
         }
     }
 
@@ -29,4 +33,5 @@ public class Enemy3D : MonoBehaviour
     {
         speed = Random.Range(5f, 10f);
     }
+    
 }
