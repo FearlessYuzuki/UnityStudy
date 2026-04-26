@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         {
             health = 0;
             gameEnded = true;
-            Time.timeScale = 0; // 游戏停止
+            Time.timeScale = 0;
         }
     }
 }
