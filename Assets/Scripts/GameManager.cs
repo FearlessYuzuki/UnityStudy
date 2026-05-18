@@ -56,9 +56,11 @@ public class GameManager : MonoBehaviour
     public void ReduceHealth(float amount)
     {
         health -= amount;
-        if (health <= 0) 
+        if (health <= 0)
         {
             health = 0;
+            healthText.text = "Health: " + health;
+
             gameEnded = true;
             Time.timeScale = 0;
         }
