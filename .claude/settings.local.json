@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"D:\\\\project\\\\Unity\\\\Demo_1\" show \"130fb68:Assets/Scenes/GameScenes.unity\")"
+    ]
+  }
+}

@@ -5,7 +5,7 @@
         //TODO:
                 1.load and save
                 2.Settings
-                3.main UI
+                3.main UI (half)
                 4.Game Choice
 
         

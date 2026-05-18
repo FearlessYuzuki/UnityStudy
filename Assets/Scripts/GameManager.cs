@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +22,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // 如果游戏已经结束，就不再往下执行了
-        if (gameEnded) return;
+        if (gameEnded)
+        {
+            GameOver();
+            return;
+        }
+        if(gameEnded) return;
         healthText.text = "Health: " + health;
         // 如果时间还没扣完
         if (timeRemaining > 0)
@@ -64,5 +70,10 @@ public class GameManager : MonoBehaviour
             gameEnded = true;
             Time.timeScale = 0;
         }
+    }
+
+    public void GameOver()
+    {
+       SceneManager.LoadScene("Main UI");
     }
 }
