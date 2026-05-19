@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/SettingsUI/SettingsUIuss.uss?fileID=7433441132597879392&amp;guid=2bc9f1b728f67404cad1855e1a570d09&amp;type=3#SettingsUIuss"/>
+    <ui:VisualElement class="SettingsPanel" style="flex-grow: 1; background-color: rgb(84, 53, 74);">
+        <ui:Foldout text="Res&#10;" name="ResolutionSettings" style="background-color: rgb(255, 255, 255);">
+            <ui:TextField label="Resolution" placeholder-text="filler text" style="flex-direction: row;"/>
+        </ui:Foldout>
+        <ui:Button text="Exit&#10;" name="SettingsQuit" style="justify-content: flex-end; align-self: flex-end; align-content: flex-end; flex-direction: row-reverse; margin-left: 4px; align-items: auto; white-space: nowrap; padding-top: 10px; padding-bottom: 12px; border-bottom-width: 1px; border-top-width: 1px; transform-origin: center; scale: 1 1; width: auto; right: auto; -unity-text-align: upper-left; bottom: auto; top: 90%; -unity-text-auto-size: none; position: absolute;"/>
+        <ui:Button text="Save&#10;" name="Save" style="right: auto; left: 84%; top: 90%; align-self: flex-end; align-content: auto; align-items: auto; height: 42px; width: 55px; transform-origin: center; position: absolute;"/>
+    </ui:VisualElement>
+</ui:UXML>
