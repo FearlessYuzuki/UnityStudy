@@ -14,8 +14,6 @@ public class SettingsQuitButton : MonoBehaviour
       uiDocument = GetComponent<UIDocument>();
       
       var ExitButton = uiDocument.rootVisualElement.Q<Button>("SettingsQuit");
-      var SaveButton = uiDocument.rootVisualElement.Q<Button>("Save");
-      
       ExitButton?.RegisterCallback<ClickEvent>(BackToMain);
    }
 
