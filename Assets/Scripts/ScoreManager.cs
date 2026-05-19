@@ -42,6 +42,6 @@ public class ScoreManager : MonoBehaviour
     // 刷新显示
     void UpdateScoreUI()
     {
-        scoreText.text = "SCORE: " + currentScore.ToString("D6"); // D6 表示显示 6 位数，比如 000100
+        scoreText.text = "SCORE  " + currentScore.ToString("D6");
     }
 }

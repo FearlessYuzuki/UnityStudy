@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
             return;
         }
         if(gameEnded) return;
-        healthText.text = "Health: " + health;
+
+        UpdateHealthUI();
         // 如果时间还没扣完
         if (timeRemaining > 0)
         {
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
     void UpdateTimerUI()
     {
         int seconds = Mathf.CeilToInt(timeRemaining);
-        timerText.text = "TIME: " + seconds.ToString();
+        timerText.text = "TIME  " + seconds.ToString();
     }
 
     void EndGame()
@@ -62,14 +63,25 @@ public class GameManager : MonoBehaviour
     public void ReduceHealth(float amount)
     {
         health -= amount;
+        UpdateHealthUI();
+
         if (health <= 0)
         {
             health = 0;
-            healthText.text = "Health: " + health;
-
+            UpdateHealthUI();
             gameEnded = true;
             Time.timeScale = 0;
         }
+    }
+
+    void UpdateHealthUI()
+    {
+        string hpColor;
+        if (health > 50) hpColor = "#80FF80";
+        else if (health > 20) hpColor = "#FFAA40";
+        else hpColor = "#FF4040";
+
+        healthText.text = "HP  <color=" + hpColor + ">" + health + "</color>";
     }
 
     public void GameOver()

@@ -1,9 +1,28 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/SettingsUI/SettingsUIuss.uss?fileID=7433441132597879392&amp;guid=2bc9f1b728f67404cad1855e1a570d09&amp;type=3#SettingsUIuss"/>
-    <ui:VisualElement class="SettingsPanel" style="flex-grow: 1; background-color: rgb(84, 53, 74);">
-        <ui:Button text="Exit&#10;" name="SettingsQuit" style="justify-content: flex-end; align-self: flex-end; align-content: flex-end; flex-direction: row-reverse; margin-left: 4px; align-items: auto; white-space: nowrap; padding-top: 10px; padding-bottom: 12px; border-bottom-width: 1px; border-top-width: 1px; transform-origin: center; scale: 1 1; width: 55px; right: auto; -unity-text-align: upper-center; bottom: 0; top: auto; -unity-text-auto-size: none; position: absolute; height: 38px; left: 75%;"/>
-        <ui:Button text="Save&#10;" name="Save" style="right: 0; left: auto; top: auto; align-self: flex-end; align-content: auto; align-items: auto; height: 38px; width: 55px; transform-origin: center; position: absolute; bottom: 0;"/>
-        <ui:Button text="Reset&#10;" name="ResetButton" style="align-self: flex-end; bottom: 0; left: 83.52%; position: absolute; top: auto; align-content: stretch; width: 55px; height: 38px; right: auto;"/>
-        <ui:DropdownField label="Resolution&#10;" style="background-color: rgb(255, 255, 255);"/>
+    <ui:VisualElement class="SettingsPanel" style="flex-grow: 1; background-color: rgb(84, 53, 74); align-items: center; justify-content: center;">
+
+        <!-- 设置标题 -->
+        <ui:Label text="Settings" name="SettingsTitle" style="font-size: 36px; color: white; margin-bottom: 40px; -unity-font-style: bold;"/>
+
+        <!-- 分辨率设置 -->
+        <ui:VisualElement class="SettingRow">
+            <ui:Label text="Resolution" class="SettingLabel"/>
+            <ui:DropdownField name="ResolutionDropdown" class="SettingDropdown"/>
+        </ui:VisualElement>
+
+        <!-- 全屏设置 -->
+        <ui:VisualElement class="SettingRow">
+            <ui:Label text="Fullscreen" class="SettingLabel"/>
+            <ui:Toggle name="FullscreenToggle" class="SettingToggle"/>
+        </ui:VisualElement>
+
+        <!-- 按钮区域 -->
+        <ui:VisualElement class="ButtonRow">
+            <ui:Button text="Save" name="Save" class="SettingButton SaveButton"/>
+            <ui:Button text="Reset" name="ResetButton" class="SettingButton ResetButton"/>
+            <ui:Button text="Exit" name="SettingsQuit" class="SettingButton ExitButton"/>
+        </ui:VisualElement>
+
     </ui:VisualElement>
 </ui:UXML>

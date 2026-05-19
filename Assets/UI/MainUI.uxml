@@ -1,8 +1,16 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=ebabf463936bd4a4ab60b793df11d3bc&amp;type=3#MainMenu"/>
-    <ui:VisualElement name="Panel" class="Panel" style="flex-grow: 1; position: relative; opacity: 1; visibility: visible; background-color: rgb(50, 58, 103);">
-        <ui:Button text="Start" name="Start" style="position: relative; bottom: auto; top: 25%; flex-direction: column; flex-wrap: wrap-reverse; align-items: flex-start; justify-content: flex-start; align-self: auto; align-content: flex-start;"/>
-        <ui:Button text="Exit&#10;" name="Exit" style="top: 35%;"/>
-        <ui:Button text="Settings" picking-mode="Position" name="SettingsButton" style="-unity-text-align: middle-center; white-space: nowrap; top: 45%;"/>
+    <ui:VisualElement class="MainPanel" style="flex-grow: 1; background-color: rgb(50, 58, 103); align-items: center; justify-content: center;">
+
+        <!-- 标题 -->
+        <ui:Label text="Demo Game" name="GameTitle" class="TitleLabel"/>
+
+        <!-- 按钮区域 -->
+        <ui:VisualElement class="ButtonColumn">
+            <ui:Button text="Start" name="Start" class="MainButton StartButton"/>
+            <ui:Button text="Settings" name="SettingsButton" class="MainButton SettingsBtn"/>
+            <ui:Button text="Exit" name="Exit" class="MainButton ExitBtn"/>
+        </ui:VisualElement>
+
     </ui:VisualElement>
 </ui:UXML>

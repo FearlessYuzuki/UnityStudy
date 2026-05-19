@@ -1,5 +1,52 @@
-:root {
+.MainPanel {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
 }
 
-.Panel {
+.TitleLabel {
+    font-size: 44px;
+    color: white;
+    margin-bottom: 50px;
+    -unity-font-style: bold;
+}
+
+.ButtonColumn {
+    flex-direction: column;
+    align-items: center;
+}
+
+.MainButton {
+    width: 220px;
+    height: 50px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    color: white;
+}
+
+.StartButton {
+    background-color: rgb(60, 140, 80);
+}
+
+.StartButton:hover {
+    background-color: rgb(80, 170, 100);
+}
+
+.SettingsBtn {
+    background-color: rgb(180, 130, 50);
+}
+
+.SettingsBtn:hover {
+    background-color: rgb(200, 150, 70);
+}
+
+.ExitBtn {
+    background-color: rgb(160, 60, 60);
+}
+
+.ExitBtn:hover {
+    background-color: rgb(190, 80, 80);
 }
