@@ -10,7 +10,7 @@
 *.meta linguist-generated=true
 
 # TMP 生成的文件
-Assets/TextMesh\ Pro/** linguist-generated=true
+"Assets/TextMesh Pro/**" linguist-generated=true
 
 # URP 渲染管线自动生成的资源
 Assets/Settings/*.asset linguist-generated=true
