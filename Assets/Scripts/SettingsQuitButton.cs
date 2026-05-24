@@ -1,6 +1,3 @@
-using System;
-using Unity.VectorGraphics;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
