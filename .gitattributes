@@ -1,22 +1,22 @@
 # 纠正 GitHub Linguist 语言识别
 
-# .asset 是 Unity 序列化资源，不是 ShaderLab
-*.asset linguist-language=C# linguist-detectable=false
-
-# .mat 是 Unity 材质文件
+# Unity .asset/.mat 文件排除出语言统计（避免被误识别为 ShaderLab）
+*.asset linguist-detectable=false
 *.mat linguist-detectable=false
+*.prefab linguist-detectable=false
+*.unity linguist-detectable=false
 
-# TMP 生成的文件标记为 generated（不计入语言统计）
-Assets/TextMesh\ Pro/** linguist-generated=true
+# Unity 自动生成的 meta 文件
+*.meta linguist-generated=true
+
+# TMP 生成的文件
+"Assets/TextMesh Pro/**" linguist-generated=true
+
+# URP 渲染管线自动生成的资源
+Assets/Settings/*.asset linguist-generated=true
 
 # Shader 相关文件正确归类
 *.shader linguist-language=ShaderLab
 *.shadergraph linguist-language=ShaderLab
 *.cginc linguist-language=HLSL
 *.hlsl linguist-language=HLSL
-
-# Unity 自动生成的 meta 文件
-*.meta linguist-generated=true
-
-# URP 渲染管线资源
-Assets/Settings/*.asset linguist-generated=true
